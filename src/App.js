@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 
 import {Routes, Route} from 'react-router-dom';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
 
       </Routes>
 
-
+      <Footer />
    
       
     </div>
