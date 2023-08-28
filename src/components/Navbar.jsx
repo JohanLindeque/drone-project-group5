@@ -13,10 +13,10 @@ const Navbar = () => {
     <div className=' flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white '>
         <h1 className='w-full text-3xl font-bold text-[#32CD32]'>Group 5</h1>
         <ul className='hidden md:flex'>
-            <li className='p-4'>Home</li>
-            <li className='p-4'>About</li>
-            <li className='p-4'>LogIn</li>
-            <li className='p-4'>SignUp</li>
+            <li className='p-4'> <a href="/">HOME</a> </li>
+            <li className='p-4'> <a href="/about">ABOUT</a> </li>
+            <li className='p-4'> <a href="/login">LOGIN</a> </li>
+            <li className='p-4'> <a href="/signup">SIGNUP</a> </li>
 
         </ul>
 
