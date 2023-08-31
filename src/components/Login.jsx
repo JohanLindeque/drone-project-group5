@@ -8,7 +8,7 @@ const Login = () => {
         <div class="w-full bg-white rounded-lg shadow dark md:mt-0 sm:max-w-md xl:p-0 ">
 
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-                <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl " >Login</h1>
+                <h1 class="text-xl font-bold leading-tight tracking-tight text-[#32CD32]  md:text-2xl " >Login</h1>
                 <form>
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
