@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import tLogo from '../images/transparentLogo.png'
 
 const Navbar = () => {
 
@@ -10,15 +11,20 @@ const Navbar = () => {
   }
 
   return (
-    <div className=' flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white '>
-        <h1 className='w-full text-3xl font-bold text-[#32CD32]'>Group 5</h1>
-        <ul className='hidden md:flex'>
-            <li className='p-4'> <a href="/">HOME</a> </li>
-            <li className='p-4'> <a href="/about">ABOUT</a> </li>
-            <li className='p-4'> <a href="/login">LOGIN</a> </li>
-            <li className='p-4'> <a href="/signup">SIGNUP</a> </li>
+    <div >
+        <div className=' flex justify-between content-center h-[2px] mt-[20px]  max-w-[auto] mx-auto px-20 text-white border-bottom-width: 5px border-color: #F3F4F6'>
+          <h1 className=' text-3xl font-bold text-[white]'>Group 5</h1>
+         
+          {/* <img src={tLogo} alt="logo" className='w-1/4 mx-auto object-fit' /> */}
+          <ul className='hidden md:flex space-x-4 font-medium  '>
+              <li className='p-2 hover:text-[#ff8c00] hover:font-bold'> <a href="/">HOME</a> </li>
+              <li className='p-2 hover:text-[#ff8c00] hover:font-bold'> <a href="/about">ABOUT</a> </li>
+              <li className='p-2 hover:text-[#ff8c00] hover:font-bold'> <a href="/login">LOGIN</a> </li>
+              <li className='p-2 hover:text-[#ff8c00] hover:font-bold'> <a href="/signup">SIGNUP</a> </li>
 
-        </ul>
+          </ul>
+          
+        </div>
 
         {/* Burger menu */}
 
