@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-import tLogo from '../images/transparentLogo.png'
+import drone from '../images/logoDrone.png'
 
 const Navbar = () => {
 
@@ -11,11 +11,11 @@ const Navbar = () => {
   }
 
   return (
-    <div >
-        <div className=' flex justify-between content-center h-[2px] mt-[20px]  max-w-[auto] mx-auto px-20 text-white border-bottom-width: 5px border-color: #F3F4F6'>
-          <h1 className=' text-3xl font-bold text-[white]'>Group 5</h1>
+    <div className='fixed z-50 fixed top-0 left-0 w-full bg-[#0E327A]'>
+        <div className=' flex justify-between content-center  mt-[20px] h-[60px]  max-w-[auto] mx-auto px-20  text-white border-b-[1px] border-[#F3F4F6]'>
+          {/* <h1 className=' text-3xl font-bold text-[white]'>Group 5</h1> */}
          
-          {/* <img src={tLogo} alt="logo" className='w-1/4 mx-auto object-fit' /> */}
+          <img src={drone} alt="logo" className=' py-2  object-fit' />
           <ul className='hidden md:flex space-x-4 font-medium  '>
               <li className='p-2 hover:text-[#ff8c00] hover:font-bold'> <a href="/">HOME</a> </li>
               <li className='p-2 hover:text-[#ff8c00] hover:font-bold'> <a href="/about">ABOUT</a> </li>

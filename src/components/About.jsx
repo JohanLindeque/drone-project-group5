@@ -3,7 +3,7 @@ import logo from '../images/logo.png'
 
 const About = () => {
   return (
-    <div className='  w-full h-screen mx-auto text-center flex flex-col justify-center' >
+    <div className=' mt-[-101px]  w-full h-screen mx-auto text-center flex flex-col justify-center' >
         <div className='w-full h-auto bg-white py-16 px-4'>
             
             <h1 className='md:text-6xl sm:text-6xl text-4xl font-bold md:py-6'> About </h1>
@@ -43,6 +43,7 @@ const About = () => {
                   our insights, discoveries, and passion with you as we continue to innovate and redefine <br />
                    what is possible.</p>
             </section>
+            <br />
 
             </div>
         </div>

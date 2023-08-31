@@ -77,7 +77,7 @@ const Hero = () => {
 
           <div className='text-center'>
             <div>
-              <h1 className='text-5xl font-bold text-[#32CD32]'>Get Started Today!</h1>
+              <h1 className='text-5xl font-bold text-[#ff8c00]'>Get Started Today!</h1>
               <br />
               <p className='text-2xl font-semibold'>Exploring Drone Innovations for Tomorrow</p>
               <p className='text-xl'>Join us in shaping the future of technology and industries with our cutting-edge <br /> drone project. Experience secure solutions, advanced monitoring, <br />
