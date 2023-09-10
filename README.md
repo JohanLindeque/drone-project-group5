@@ -1,6 +1,6 @@
 # Drone Project Website
 
-This repository contains the official website for the Drone Project developed by a group of 3rd year BSc Computing students at [Your University Name]. Our project explores the innovative applications of drone technology in various industries, focusing on security, monitoring, and transforming possibilities.
+This repository contains the official website for the Drone Project developed by a group of 3rd year BSc Computing students at Belgium Campus. Our project explores the innovative applications of drone technology in various industries, focusing on security, monitoring, and transforming possibilities.
 
 ## About
 
