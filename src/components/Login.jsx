@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
 const handleLogin = (formData) => {
-  // Check if the entered credentials match (e.g., email: "admin", password: "email")
+  // THIS IS FOR DEV PURPOSES ONLY
   if (formData.email === 'admin@email' && formData.password === 'admin') {
     // Redirect to /dashboard using window.location.href
     window.location.href = '/dashboard';
   } else {
-    alert('Invalid credentials. Please try again.'); // Show an error message
+    // incorect credentials
+    alert('Invalid credentials. Please try again.'); 
   }
 };
 
@@ -30,6 +31,7 @@ const Login = () => {
     // Call the login function with form data
     handleLogin(formData);
   };
+
 
   return (
     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
