@@ -6,3 +6,10 @@ orange: #ff8c00
 Basic login set up
 Email: admin@email
 Pass: admin
+
+Frontend:
+npm i
+npm start dev
+
+BAckend:
+run server: npm start
