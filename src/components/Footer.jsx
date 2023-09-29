@@ -7,9 +7,7 @@ const Footer = () => {
         <br />
         <p>&copy; 2023 Group 5. All Rights Reserved.</p>
         <br />
-        <div>
-        <button className='bg-[#32CD32] text-white px-4 py-2 rounded-md'><a href="/dashboard">Dashboard_dev</a></button>
-      </div>
+        
 
       </div>
     </footer>
