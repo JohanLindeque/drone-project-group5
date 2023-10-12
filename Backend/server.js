@@ -1,57 +1,57 @@
-const express = require('express');
-const mysql = require('mysql2');
-const cors = require('cors');
-
+import express from 'express';
+import mysql from 'mysql';
 
 const app = express();
-const port = 5000;
 
-// Create a MySQL database connection
+// connect to prg381db database
 const db = mysql.createConnection({
-  host: 'localhost', 
-  user: 'root', 
-  password: 'password', 
-  database: 'prj381', 
+
+    host: "localhost",
+    user: "root",
+    password: "root123",
+    database: "prg381db"
+
 });
 
-app.use(express.json());
-app.use(cors());
-
-// API endpoint to fetch all users
-app.get('/users', (req, res) => {
-  const q = "SELECT * FROM users"
-  db.query(q, (err, data) => {
-    if (err) {
-      console.error('Error fetching users:', err);
-      res.status(500).json({ error: 'Internal Server Error' });
-      return;
-    }
-    res.json(data);
-  });
+app.get('/', (req,res)=>{
+    res.json({message: 'Welcome to the PRG381 project!'})
 });
 
-// API endpoint to create a new user
-app.post('/users', (req, res) => {
-  const q = "INSERT INTO users (User_email, User_password) VALUES (?)";
-  const values = [
-    req.body.email,
-    req.body.password
-  ];
-  if (!values) {
-    res.status(400).json({ error: 'Text is required' });
-    return;
-  }
 
-  db.query(q, [values], (err, result) => {
-    if (err) {
-      console.error('Error creating todo:', err);
-      res.status(500).json({ error: 'Internal Server Error' });
-      return;
-    }
-    res.json({ message: 'User created successfully', id: result.insertId });
-  });
+// GET all users
+app.get('/users', (req,res)=>{
+    const q = "SELECT * FROM users";
+    db.query(q, (err, data)=>{
+        if(err) return res.json(err);
+        res.json(data)
+    })
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+//  Add a new user
+app.post('/users', (req,res)=>{
+    
+    const q = "INSERT INTO users (`email`,`password`) VALUES (?)";
+    const values = ["backend@email","backend"];
+
+
+    db.query( q, [values], (err, data)=>{
+        if(err) return res.json(err);
+        return res.json("data inserted successfully");
+    })
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.listen(8800, () =>{
+    console.log('Backend server is running! ')
+})
