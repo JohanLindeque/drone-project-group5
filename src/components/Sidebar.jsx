@@ -2,18 +2,31 @@ import React from 'react';
 
 const Sidebar = ({ onContentChange }) => {
   return (
-    <div className='bg-[gray]  h-screen flex-col  mt-10'>
-      <h1>Menu</h1>
-      <br />
-      <div>
-        <button
-          className='bg-[red] hover:bg-[blue] text-white font-bold py-2 px-4 rounded flex'
-          onClick={() => onContentChange('drone')}>
+    <div className='fixed left-0 top-0 h-screen w-60 bg-blue-800 text-white'>
+      <h1 className='text-3xl font-bold text-[#32CD32] my-4 mx-6'>Group 5</h1>
+      <ul className='uppercase p-4'>
+        <li
+          className='p-4 cursor-pointer border-b border-[#0E327A]'
+          onClick={() => onContentChange('profile')}
+        >
+          Profile
+        </li>
+        <li
+          className='p-4 cursor-pointer border-b border-[#0E327A]'
+          onClick={() => onContentChange('drone')}
+        >
           Drone
-        </button>
-
-        <button className='bg-[green] hover:bg-[blue] text-white font-bold py-2 px-4 rounded'>Objects</button>
-      </div>
+        </li>
+        <li
+          className='p-4 cursor-pointer border-b border-[#0E327A]'
+          onClick={() => onContentChange('known-objects')}
+        >
+          Known Objects
+        </li>
+        <li className='p-4 cursor-pointer' onClick={() => onContentChange('signup')}>
+          - iets anders -
+        </li>
+      </ul>
     </div>
   );
 };

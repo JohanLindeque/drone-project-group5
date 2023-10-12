@@ -1,24 +1,31 @@
-import React from 'react';
-import Sidebar from './Sidebar';
+import React, { useState } from 'react';
+import Profile from './Profile';
+import Drone from './Drone';
 import KnownObjects from './KnownObjects';
+import Sidebar from './Sidebar';
 
-const Dashboard = () => {
+const App = () => {
+  const [content, setContent] = useState('drone');
+
+  const handleContentChange = (selectedContent) => {
+    setContent(selectedContent);
+  };
+
   return (
-    <div className="flex mt-8">
-      {/* Sidebar on the left */}
-      <div className="w-1/4 bg-gray-200 p-4">
-        <Sidebar />
+    <div className="flex h-screen">
+      {/* Sidebar */}
+      <div className="w-1/4 bg-blue-800 text-white py-4">
+        <Sidebar onContentChange={handleContentChange} />
       </div>
 
-      {/* KnownObjects on the right */}
-      <div className="flex-grow p-4">
-        <div className="container mx-auto ">
-          <h1 className="text-3xl font-bold mb-4 text-red-600">Dashboard</h1>
-          <KnownObjects />
-        </div>
+      {/* Content Area */}
+      <div className="flex-grow p-6 ml-2 mt-8">
+        {content === 'profile' && <Profile />}
+        {content === 'drone' && <Drone />}
+        {content === 'known-objects' && <KnownObjects />}
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default App;

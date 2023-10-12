@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const KnownObjects = () => {
+const KnownObjectsComponent = () => {
   return (
-<div className='w-5/6' >
-    <div>
-    <h1 className='text-xl font-semibold text-white '>the content comes here</h1>
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-[#32CD32]">Known Objects</h2>
+      <p className="text-lg">Explore a list of known objects here.</p>
+      {/* Add your known objects content here */}
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default KnownObjects
+export default KnownObjectsComponent;
