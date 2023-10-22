@@ -7,6 +7,8 @@ const Hero = () => {
   return (
     //  Home page
     <div>
+      
+     
       {/*  Hero section */}
       <div className='text-white bg-[#0E327A]'>
 

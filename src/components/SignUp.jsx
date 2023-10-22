@@ -22,7 +22,7 @@ const SignUp = () => {
 
                     <br />
                     <div>
-                        <button type="submit" class="w-full text-white bg-[#0E327A] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Sign in</button>
+                        <button type="submit" class="w-full text-white bg-[#0E327A] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Sign up</button>
                         
                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                             Have an account? <a href="/login" class="font-medium text-[#EB1402] hover:underline ">Log In</a>

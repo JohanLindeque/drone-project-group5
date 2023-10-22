@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# add the notes.txt file to the .gitignore file
+notes.txt
+```
