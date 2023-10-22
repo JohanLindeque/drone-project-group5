@@ -36,7 +36,7 @@ const Sidebar = ({ onContentChange }) => {
           Patrols
         </li>
         <li className='p-4 cursor-pointer' onClick={() => onContentChange('signup')}>
-          - iets anders -
+          {/* - iets anders - */}
         </li>
       </ul>
     </div>
