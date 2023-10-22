@@ -3,6 +3,8 @@ import Profile from './Profile';
 import Drone from './Drone';
 import KnownObjects from './KnownObjects';
 import Sidebar from './Sidebar';
+import PatrolPath from './PatrolPath'
+import Patrol from './Patrols'
 
 const App = () => {
   const [content, setContent] = useState('drone');
@@ -23,6 +25,8 @@ const App = () => {
         {content === 'profile' && <Profile />}
         {content === 'drone' && <Drone />}
         {content === 'known-objects' && <KnownObjects />}
+        {content === 'patrol-path' && <PatrolPath />}
+        {content === 'patrols' && <Patrol />}
       </div>
     </div>
   );

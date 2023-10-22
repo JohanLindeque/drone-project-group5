@@ -23,6 +23,18 @@ const Sidebar = ({ onContentChange }) => {
         >
           Known Objects
         </li>
+        <li
+          className='p-4 cursor-pointer border-b border-[#0E327A]'
+          onClick={() => onContentChange('patrol-path')}
+        >
+          Patrol Path
+        </li>
+        <li
+          className='p-4 cursor-pointer border-b border-[#0E327A]'
+          onClick={() => onContentChange('patrols')}
+        >
+          Patrols
+        </li>
         <li className='p-4 cursor-pointer' onClick={() => onContentChange('signup')}>
           - iets anders -
         </li>
