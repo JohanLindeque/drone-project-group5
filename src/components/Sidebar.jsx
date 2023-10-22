@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sidebar = ({ onContentChange }) => {
   return (
-    <div className='fixed left-0 top-0 h-screen w-60 bg-blue-800 text-white'>
+    <div className='fixed left-0 top-0 h-2/6 w-60 bg-blue-800 text-white'>
       <h1 className='text-3xl font-bold text-[#32CD32] my-4 mx-6'>Group 5</h1>
       <ul className='uppercase p-4'>
         <li
