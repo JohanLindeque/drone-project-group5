@@ -14,7 +14,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-5/6">
       {/* Sidebar */}
       <div className="w-1/4 bg-blue-800 text-white py-4">
         <Sidebar onContentChange={handleContentChange} />
