@@ -16,10 +16,9 @@ const ProfileComponent = () => {
   const [newEmail, setNewEmail] = useState(''); // State to hold the new email address
   const [showEmailModal, setShowEmailModal] = useState(false); // State to control the email update modal
 
-  const logout = () => {
-    alert('You have successfully logged out');
-    // Redirects to the login page
-    navigate('/login');;
+  const dashboard = () => {
+    // Redirects to the dashboard page
+    navigate('/dashboard');;
   };
 
   const deleteProfile = () => {
@@ -69,10 +68,10 @@ const ProfileComponent = () => {
 
 <div className='mt-8 flex justify-between'>
   <button
-    onClick={logout}
+    onClick={dashboard}
     className='bg-blue-500 text-white px-4 py-2 rounded-md mr-2'
   >
-    Logout
+    Dashboard
   </button>
   <button
     onClick={deleteProfile}
