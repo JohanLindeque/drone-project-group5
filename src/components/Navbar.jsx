@@ -1,14 +1,31 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import drone from '../images/logoDrone.png'
+import { AuthContext } from '../context/authContext';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 
   const [nav, setNav] = useState(false);
 
+  const {currentUser, logout} = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const handleNav = () =>{
     setNav(!nav);
   }
+
+  const handleClick = async e =>{
+    e.preventDefault();
+    try {
+        await logout();
+        navigate("/");
+
+    } catch (err) {
+        
+    }
+}
 
   return (
     <div className='fixed z-50 fixed top-0 left-0 w-full bg-[#0E327A]'>
@@ -16,13 +33,14 @@ const Navbar = () => {
           {/* <h1 className=' text-3xl font-bold text-[white]'>Group 5</h1> */}
          
           <img src={drone} alt="logo" className=' py-2  object-fit' />
-          <ul className='hidden md:flex space-x-4 font-medium  '>
-              <li className='p-2 hover:text-[#ff8c00] hover:font-bold'> <a href="/">HOME</a> </li>
-              <li className='p-2 hover:text-[#ff8c00] hover:font-bold'> <a href="/about">ABOUT</a> </li>
-              <li className='p-2 hover:text-[#ff8c00] hover:font-bold'> <a href="/login">LOGIN</a> </li>
-              <li className='p-2 hover:text-[#ff8c00] hover:font-bold'> <a href="/signup">SIGNUP</a> </li>
-
-          </ul>
+          <div className='hidden md:flex space-x-4 font-medium'>
+            <Link className='p-2 hover:text-[#ff8c00] hover:font-bold' to="/">HOME</Link>
+            <Link className='p-2 hover:text-[#ff8c00] hover:font-bold' to="/about">ABOUT</Link>
+            {currentUser ? <span></span> : <Link className='p-2 hover:text-[#ff8c00] hover:font-bold' to="/signup">SIGNUP</Link>}
+            <Link className='p-2 hover:text-[#ff8c00] hover:font-bold' to="/profile">{currentUser?.User_email}</Link>
+            {currentUser ? <span onClick={handleClick} className="p-2 hover:text-[#ff8c00] hover:font-bold" style={{ cursor: 'pointer' }}>LOGOUT</span>: <Link className='p-2 hover:text-[#ff8c00] hover:font-bold' to="/login">LOGIN</Link>}
+          </div>
+      
           
         </div>
 

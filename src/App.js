@@ -5,6 +5,7 @@ import About from './components/About';
 import Login from './components/Login';
 import Signup from './components/SignUp';
 import Dashboard from './components/Dashboard';
+import Profile from './components/Profile';
 
 import {Routes, Route} from 'react-router-dom';
 import Footer from './components/Footer';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
 
       </Routes>
 

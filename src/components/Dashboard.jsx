@@ -16,12 +16,12 @@ const App = () => {
   return (
     <div className="flex h-5/6">
       {/* Sidebar */}
-      <div className="w-1/4 bg-blue-800 text-white py-4">
+      <div className="w-1/6 bg-blue-800 text-white py-4">
         <Sidebar onContentChange={handleContentChange} />
       </div>
 
       {/* Content Area */}
-      <div className="flex-grow p-6 ml-2 mt-8">
+      <div className="flex-grow p-3 ml-2 mt-8">
         {content === 'profile' && <Profile />}
         {content === 'drone' && <Drone />}
         {content === 'known-objects' && <KnownObjects />}
